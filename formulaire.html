@@ -4,12 +4,12 @@
   <meta charset="utf-8">
 
   <!-- Compléter le titre de la page -->
-  <title>Met un titre ici</title>
+  <title>Formulaire NSI 2020</title>
   <!-- ***************************** -->
 
   <!-- Faire l'inclusion du css et du script js -->
-
-
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <script type="text/javascript" src="script.js"></script>
   <!-- ***************************** -->
 </head>
 <body>
@@ -20,13 +20,19 @@
   <section id="formulary">
 
   <!-- Affecter au formulaire l'identité "terminale" -->
-  <form  action="#" method="get">  <br/>
+  <formn id="terminale" ction="#" method="get">  <br/>
   <!-- ***************************** -->
       <!-- Affecter à l'article l'identité "identity" et la classe "choix" -->
-      <article>
+      <article id="identity" class="choix">
       <!-- ***************************** -->
-        <!-- Ecrire le code du formulaire de saisie de l'Identité
-            * Titre de niveau 2 : "Identité :"
+        <!-- Ecrire le code du formulaire de saisie de l'Identité -->
+        <h2>Indentité :</h2>
+        <p>Indiquez vos nom et prenom</p>
+        <p>Prénom</p>
+        <input type="text" name="prenom" value="">
+        <p>Nom</p>
+        <input type="text" name="nom" value="">
+        <!-- * Titre de niveau 2 : "Identité :"
             * paragraphe : "Indiquez vos nom et prenom"
             * paragraphe : "Prénom"
             * champ de saisie de texte d’une ligne avec comme nom "prenom"
@@ -36,8 +42,13 @@
       </article>
 
       <!-- Affecter à l'article l'identité "classe" et la classe "choix" -->
-      <article>
+      <article id="classe" class=" choix">
       <!-- ***************************** -->
+          <h2>Votre classe :</h2>
+          <p>En quelle classe êtes vous ?</p>
+          <p>1G2 :<Input type = "radio" name="classe" value="1G2"></p>
+          <p>1G3 :<Input type = "radio" name="classe" value="1G3"></p>
+          <p>1G5 :<Input type = "radio" name="classe" value="1G5"></p>
         <!-- Ecrire le code du formulaire de choix de la classe
             * Titre de niveau 2 : "Votre classe :"
             * paragraphe : "En quelle classe êtes vous ?"
@@ -50,6 +61,16 @@
      <!-- Affecter à l'article l'identité "speciality" et la classe "choix" -->
      <article id="speciality" class="choix">
      <!-- ***************************** -->
+      <h2>Les spécialités en terminale :</h2>
+      <p>Choisissez vos deux spécialités</p>
+      <p>ARTS_PLASTIQUES <input type="checkbox" name="ARTS_PLASTIQUES" value="ARTS PLASTIQUES"></p>
+      <p>LITT_ANGLAIS <input type="checkbox" name="LITT_ANGLAIS" value="LITT. ANGLAIS"></p>
+      <p>LITT_ESPAGNOL <input type="checkbox" name="LITT_ESPAGNOL" value="LITT. ESPAGNOL"></p>
+      <p>MATHEMATIQUES <input type="checkbox" name="MATHEMATIQUES" value="MATHEMATIQUES"></p>
+      <p>NUMERIQUE_SC_INFORM <input type="checkbox" name="NUMERIQUE_SC_INFORM" value="NUMERIQUE SC.INFORM"></p>
+      <p>PHYSIQUE_CHIMIE <input type="checkbox" name="PHYSIQUE_CHIMIE" value="PHYSIQUE-CHIMIE"></p>
+      <p>SC_ECONO_SOCIALES <input type="checkbox" name="SC_ECONO_SOCIALES" value="SC. ECONO.& SOCIALES"></p>
+
        <!-- Ecrire le code du formulaire de choix des spécialités
            * Titre de niveau 2 : "Les spécialités en terminale :"
            * paragraphe : "Choisissez vos deux spécialités"
@@ -65,7 +86,7 @@
      </article>
 
     <article class="resultat">
-        <input class="button" type="submit" value="Voir le résultat!" />
+        <input class="button"  type="submit" value="Voir le résultat!"/>
         <h1 id="resultat"></h1>
     </article>
 
