@@ -18,6 +18,7 @@ function init () {
       const good = "NUMERIQUE_SC_INFORM";
       // La fonction split découpe une chaine de caractères (string) et retourne un tableau (array)
       // Quel caractère sépare les ensemble variable=valeur ?
+      // C'est le charactère &
       // Utiliser ce caractère pour découper la chaine sReq
       var aReq = sReq.split("&");
       var mess = "";
@@ -25,6 +26,7 @@ function init () {
       var aVar = [];
       for (var i=0;i<aReq.length;i++) {
         // Quel caractère sépare une variable de sa valeur ?
+        // C'est le charactère =
         // Utiliser ce caractère pour découper la chaine aReq[i]
         aVar[i] = aReq[i].split("=");
         // Observer dans la console
@@ -32,7 +34,7 @@ function init () {
       }
       //Construire la chaine suivante en utilisant les valeurs récupérées
       // mess = valeur_du prenom + " " + valeur_du_nom + " " + valeur_de_classe + " : "
-      mess = aVar[0][1] + " " + aVar[2][1] + " de " + [2][1] + " : ";
+      mess = aVar[0][1] + " " + aVar[1][1] + " de " + aVar[2][1] + " : ";
 
       //Si au moins une des spécialités est = "NUMERIQUE_SC_INFORM"
       // Ajouter à mess "Bon choix !"
@@ -112,5 +114,4 @@ function resultat() {
 }
 
 // Exécuert init() au chargement de la page
-
 window.onload = init;
